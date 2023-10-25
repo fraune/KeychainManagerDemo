@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F5A2DC332AE9DD590066BDE4 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = F5A2DC322AE9DD590066BDE4 /* KeychainAccess */; };
+		F5A2DC362AE9DD750066BDE4 /* OktaSecureStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F5A2DC352AE9DD750066BDE4 /* OktaSecureStorage */; };
+		F5A2DC392AE9DD8C0066BDE4 /* Valet in Frameworks */ = {isa = PBXBuildFile; productRef = F5A2DC382AE9DD8C0066BDE4 /* Valet */; };
 		F5C260D62AE9DC480056272C /* KeychainManagerDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C260D52AE9DC480056272C /* KeychainManagerDemoApp.swift */; };
 		F5C260D82AE9DC480056272C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C260D72AE9DC480056272C /* ContentView.swift */; };
 		F5C260DA2AE9DC490056272C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5C260D92AE9DC490056272C /* Assets.xcassets */; };
@@ -26,6 +29,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5A2DC392AE9DD8C0066BDE4 /* Valet in Frameworks */,
+				F5A2DC362AE9DD750066BDE4 /* OktaSecureStorage in Frameworks */,
+				F5A2DC332AE9DD590066BDE4 /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +89,11 @@
 			dependencies = (
 			);
 			name = KeychainManagerDemo;
+			packageProductDependencies = (
+				F5A2DC322AE9DD590066BDE4 /* KeychainAccess */,
+				F5A2DC352AE9DD750066BDE4 /* OktaSecureStorage */,
+				F5A2DC382AE9DD8C0066BDE4 /* Valet */,
+			);
 			productName = KeychainManagerDemo;
 			productReference = F5C260D22AE9DC480056272C /* KeychainManagerDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,11 @@
 				Base,
 			);
 			mainGroup = F5C260C92AE9DC480056272C;
+			packageReferences = (
+				F5A2DC312AE9DD590066BDE4 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				F5A2DC342AE9DD750066BDE4 /* XCRemoteSwiftPackageReference "okta-storage-swift" */,
+				F5A2DC372AE9DD8C0066BDE4 /* XCRemoteSwiftPackageReference "Valet" */,
+			);
 			productRefGroup = F5C260D32AE9DC480056272C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -344,6 +360,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F5A2DC312AE9DD590066BDE4 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.2;
+			};
+		};
+		F5A2DC342AE9DD750066BDE4 /* XCRemoteSwiftPackageReference "okta-storage-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/okta/okta-storage-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.3;
+			};
+		};
+		F5A2DC372AE9DD8C0066BDE4 /* XCRemoteSwiftPackageReference "Valet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/square/Valet.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F5A2DC322AE9DD590066BDE4 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5A2DC312AE9DD590066BDE4 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+		F5A2DC352AE9DD750066BDE4 /* OktaSecureStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5A2DC342AE9DD750066BDE4 /* XCRemoteSwiftPackageReference "okta-storage-swift" */;
+			productName = OktaSecureStorage;
+		};
+		F5A2DC382AE9DD8C0066BDE4 /* Valet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5A2DC372AE9DD8C0066BDE4 /* XCRemoteSwiftPackageReference "Valet" */;
+			productName = Valet;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F5C260CA2AE9DC480056272C /* Project object */;
 }
